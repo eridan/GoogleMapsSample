@@ -3,19 +3,22 @@
 <html lang="en">
     <head>
         <title>THe Earth Maps!</title>
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta charset="utf-8" name="viewport" content="initial-scale=1.0, user-scalable=no" />
         <style type="text/css">
             html { height: 100% }
             body { height: 100%; margin: 0; padding: 0 }
             #map_canvas { height: 40%; margin: 10px; padding: 10px;}
             #map_canvas1 { height: 40%; margin: 10px; padding: 10px;}
         </style>
+        
+        <script src="js/myLoc.js"></script>
 
         <script type="text/javascript">
             function initialize() {
                 var myOptions = {
-                    zoom: 8,
-                    center: new google.maps.LatLng(-34.397, 150.644),
+                    zoom: 18,
+//                    center: new google.maps.LatLng(-34.397, 150.644),
+                    center: new google.maps.LatLng(lat, longit),
                     mapTypeId: google.maps.MapTypeId.HYBRID
                 }
                 var myOptions1 = {
@@ -40,7 +43,10 @@
         </script>
     </head>
 
-    <body onload="loadScript()">
+    <body>
+<!--    <body onload="loadScript()">-->
+        <div id="myLocation"> Hello! </div>
+        <br />
         <div id="map_canvas" style="width:50%; height:50%"></div>
         <div id="map_canvas1" style="width:50%; height:50%"></div>
         <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>
